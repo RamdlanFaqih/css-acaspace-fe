@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 200vh;
+            padding-top: 100px;
+        }
+
+        .container {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* DRY - Don't repeat yourself */
+
+        .item-1,
+        .item-2,
+        .item-3 {
+            height: 100px;
+        }
+
+        .item-1 {
+            background-color: aqua;
+        }
+
+        .item-2 {
+            background-color: azure;
+        }
+
+        .item-3 {
+            background-color: yellow;
+        }
+
+
+        .box1 {
+            background-color: lightblue;
+        }
+
+        .box2 {
+            background-color: burlywood;
+        }
+
+
+        /* CSS Positions */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .main-container {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: red;
+        }
+
+        .left-section {
+            background-color: black;
+            width: 100%;
+            color: white;
+            height: 500px;
+        }
+
+        .right-section {
+            background-color: lightblue;
+            width: 100%;
+            height: 500px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            .main-container {
+                grid-template-columns: 3fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="item-1">
+                <span>HamburgerMenu</span>
+                <span>Logo</span>
+            </div>
+            <div class="item-2">
+                <span>Searchbar</span>
+                <span>Mic Icon</span>
+            </div>
+            <div class="item-3">
+                <span>three dots</span>
+                <span>sign in</span>
+            </div>
+        </div>
+    </nav>
+    <h1>Position</h1>
+
+    <div class="main-container">
+        <div class="left-section">left section</div>
+        <div class="right-section">rightsection</div>
+    </div>
+</body>
+
+</html>
