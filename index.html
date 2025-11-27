@@ -4,108 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
+    <title>Document</title>
 
     <style>
-        h1 {
-            color: red;
-        }
-
-        /* button {
-            height: 36px;
-            padding-left: 15px;
-            padding-right: 15px;
-            border-radius: 18px;
-            font-size: 14px;
+        .container {
             background-color: black;
-            color: white;
-            border-style: none;
-            cursor: pointer;
-        } */
-
-        .secondary-button {
-            /* padding-top: 12px;
-            padding-right: 15px;
-            padding-bottom: 12px;
-            padding-left: 15px; */
-
-            /* shorthand vertical & horizontal */
-            padding: 12px 15px;
-
-            /* shorthand 4 arah */
-            /* padding: 12px 15px 12px 15px; */
-
-            border-radius: 20px;
-            font-size: 14px;
-            background: rgba(0, 0, 0, 0.1);
-            color: black;
-            border-style: none;
-            cursor: pointer;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
-        .main-button {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            padding-left: 15px;
-            padding-right: 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            background: rgba(0, 0, 0, 1);
-            color: white;
-            border-style: none;
-            cursor: pointer;
+        /* DRY - Don't repeat yourself */
+
+        .item-1,
+        .item-2,
+        .item-3 {
+            height: 100px;
+        }
+
+        .item-1 {
+            background-color: aqua;
+        }
+
+        .item-2 {
+            background-color: azure;
+        }
+
+        .item-3 {
+            background-color: yellow;
+        }
+
+        .container-grid {
+            display: grid;
+            gap: 20px;
+            background-color: black;
+            padding: 10px;
+            grid-template-columns: repeat(3, 1fr);
         }
     </style>
 </head>
 
 <body>
-    <nav>
+    <h1>FLEX</h1>
+    <div class="container">
+        <div class="item-1">
+            <span>HamburgerMenu</span>
+            <span>Logo</span>
+        </div>
+        <div class="item-2">
+            <span>Searchbar</span>
+            <span>Mic Icon</span>
+        </div>
+        <div class="item-3">
+            <span>three dots</span>
+            <span>sign in</span>
+        </div>
+    </div>
 
-    </nav>
-    <main id="">
-        <section class="left-section">
-            <div class="video-section" class="ngatur flexbox">
-
-            </div>
-            <div class="detail-section">
-                <div class="statistic-section">
-                    <div class="title"></div>
-                    <div class="account">
-                        <div class="account-left">
-                            <!-- TODO: Account Profile Section -->
-
-                            <!-- END TODO: Account Profile Section -->
-
-
-                            <!-- mulai dari penamaan dulu -->
-                            <!-- make sure pake bahasa inggris -->
-                            <button class="secondary-button">Join</button>
-                            <button class="main-button">Subscribe</button>
-                        </div>
-                        <div class="account-right">
-
-                        </div>
-                    </div>
-                    <div class="description">
-
-                    </div>
-                </div>
-                <div class="shop-section">
-
-                </div>
-                <div class="comments-section">
-
-                </div>
-            </div>
-        </section>
-        <section class="right-section">
-
-        </section>
-    </main>
-
-    <footer id="footer">
-
-    </footer>
+    <h1>GRID</h1>
+    <div class="container-grid">
+        <div class="item-1">
+            <span>Sidebar</span>
+            <span>Logo</span>
+        </div>
+        <div class="item-2">
+            <span>Searchbar</span>
+            <span>Mic Icon</span>
+        </div>
+        <div class="item-3">
+            <span>Searchbar</span>
+            <span>Mic Icon</span>
+        </div>
+    </div>
 </body>
 
 </html>
